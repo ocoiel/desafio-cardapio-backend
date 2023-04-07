@@ -13,5 +13,9 @@
     "fastify-cors": "^6.1.0",
     "fastify-jwt": "^4.2.0",
     "fastify-swagger": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4"
   }
 }
