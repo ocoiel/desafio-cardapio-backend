@@ -1,0 +1,11 @@
+{
+  "name": "desafio-cardapio-backend",
+  "version": "1.0.0",
+  "description": "Desafio para vaga de desenvolvedor backend Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Albuquerque",
+  "license": "ISC"
+}
