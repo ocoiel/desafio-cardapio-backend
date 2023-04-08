@@ -10,10 +10,8 @@
   "author": "Gabriel Albuquerque",
   "license": "ISC",
   "dependencies": {
-    "fastify": "^4.15.0",
-    "fastify-cors": "^6.1.0",
-    "fastify-jwt": "^4.2.0",
-    "fastify-swagger": "^5.2.0"
+    "@fastify/swagger": "^8.3.1",
+    "fastify": "^4.15.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
