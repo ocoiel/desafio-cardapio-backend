@@ -11,7 +11,10 @@ export class User {
   private props: UserProps;
 
   constructor(props: UserProps, id?: string) {
-    this.props = props;
+    this.props = {
+      ...props,
+      isAdmin: false,
+    };
     this._id = id ?? randomUUID();
   }
 
@@ -37,5 +40,9 @@ export class User {
 
   public get isAdmin(): boolean {
     return this.props.isAdmin;
+  }
+
+  public set isAdmin(isAdmin: boolean) {
+    this.props.isAdmin = isAdmin;
   }
 }
