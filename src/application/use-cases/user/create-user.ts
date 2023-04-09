@@ -1,5 +1,6 @@
 import { UserRepository } from "@application/repositories/user.repository";
 import { User } from "@domain/entities/User";
+import bcrypt from "bcrypt";
 
 interface CreteUserRequest {
   email: string;
@@ -15,9 +16,11 @@ export class CreateUser {
   async execute(request: CreteUserRequest): Promise<CreteUserResponse> {
     const { email, password } = request;
 
+    const hashedPassword = await bcrypt.hash(password, 6);
+
     const user = new User({
       email,
-      password,
+      password: hashedPassword,
       isAdmin: false,
     });
 
