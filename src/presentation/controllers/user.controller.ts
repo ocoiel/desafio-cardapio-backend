@@ -10,12 +10,6 @@ export class UserController {
     const { email, password } = createUserDTO.parse(request.body);
 
     const { user } = await this.createUser.execute({ email, password });
-
-    if (user) {
-      reply.code(201).send({ message: "User created successfully", user });
-    } else {
-      reply.code(400).send({ message: "User creation failed" });
-    }
   }
 
   async login() {}
