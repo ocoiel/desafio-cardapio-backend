@@ -2,7 +2,7 @@ import fastify from "fastify";
 import jwt from "@fastify/jwt";
 import cors from "@fastify/cors";
 
-import { connectionDatabase } from "@infrastructure/database/connection";
+import { connectionDatabase } from "./infrastructure/database/connection";
 
 const server = fastify({
   logger: true,
