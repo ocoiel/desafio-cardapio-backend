@@ -1,3 +1,5 @@
+import { randomUUID } from "crypto";
+
 export interface CategoryPros {
   name: string;
   parent: Category | null;
@@ -7,8 +9,8 @@ export class Category {
   private _id: string;
   private props: CategoryPros;
 
-  constructor(id: string, props: CategoryPros) {
-    this._id = id;
+  constructor(props: CategoryPros, id?: string) {
+    this._id = id ?? randomUUID();
     this.props = props;
   }
 
